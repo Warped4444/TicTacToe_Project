@@ -19,6 +19,7 @@
             </Style>
             
         </UniformGrid.Resources>
+        
         <Button Click="Button_Click"/>
         <Button Click="Button_Click"/>
         <Button Click="Button_Click"/>
