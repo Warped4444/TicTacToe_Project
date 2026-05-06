@@ -9,7 +9,16 @@
     
     
     
-    <Grid>
+    <UniformGrid Rows="3" Columns="3">
+        <UniformGrid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="120"/>
+                <Setter Property="FontFamily" Value="Calibri"/>
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+            
+        </UniformGrid.Resources>
         <Button/>
         <Button/>
         <Button/>
@@ -22,5 +31,5 @@
         <Button/>
         <Button/>
 
-    </Grid>
+    </UniformGrid>
 </Window>
