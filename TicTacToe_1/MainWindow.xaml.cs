@@ -25,9 +25,15 @@ namespace TicTacToe_1
             InitializeComponent();
         }
 
+        string currentLetter = "X";
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            (sender as Button).Content = currentLetter;
+            if (currentLetter == "X")
+                currentLetter = "O";
+            else 
+                currentLetter = "X";
         }
     }
 }
