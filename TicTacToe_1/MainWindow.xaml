@@ -19,17 +19,17 @@
             </Style>
             
         </UniformGrid.Resources>
-        <Button/>
-        <Button/>
-        <Button/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
 
-        <Button/>
-        <Button/>
-        <Button/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
 
-        <Button/>
-        <Button/>
-        <Button/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
+        <Button Click="Button_Click"/>
 
     </UniformGrid>
 </Window>
