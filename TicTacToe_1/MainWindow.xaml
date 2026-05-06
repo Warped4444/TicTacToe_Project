@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe_1"
         mc:Ignorable="d"
-        Title="Tic" Height="430" Width="430">
+        Title="TicTacToe App" Height="450" Width="450">
+    
+    
+    
     <Grid>
-        
+        <Button/>
+        <Button/>
+        <Button/>
+
+        <Button/>
+        <Button/>
+        <Button/>
+
+        <Button/>
+        <Button/>
+        <Button/>
+
     </Grid>
 </Window>
