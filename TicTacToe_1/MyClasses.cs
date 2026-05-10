@@ -18,6 +18,9 @@ namespace TicTacToe_1
         }
         public void IncreaseTextSize()
         {
+            int size = accelerationButton.GetFontSize(); 
+            accelerationButton.SetFontSize(1000);
+
             string result = accelerationButton.MakeTextBigger(250);
 
             if (result == "fail")
@@ -27,7 +30,7 @@ namespace TicTacToe_1
 
     class Button
     {
-        int fontSize = 60;
+        private int fontSize = 60;
 
         public string MakeTextBigger(int size)
         {
@@ -41,5 +44,15 @@ namespace TicTacToe_1
                 return "fail";
             
         }
+
+        public int FontSize
+        {
+            get { return fontSize; }
+            set
+            {
+                fontSize = value;
+            }
+        }
+
     }
 }
