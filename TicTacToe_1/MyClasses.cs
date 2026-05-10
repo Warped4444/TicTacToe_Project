@@ -9,22 +9,30 @@ namespace TicTacToe_1
     class Car
     {
         String color = "red";
-        int currentSpeed = 0;
+        protected int currentSpeed = 0;
         Button accelerationButton = new Button();
 
-        public void Accelerate()
+        public virtual void Accelerate()
         {
             currentSpeed = 100;
         }
         public void IncreaseTextSize()
         {
-            int size = accelerationButton.GetFontSize(); 
-            accelerationButton.SetFontSize(1000);
+            int size = accelerationButton.FontSize; 
+            accelerationButton.FontSize = 1000;
 
             string result = accelerationButton.MakeTextBigger(250);
 
             if (result == "fail")
                 accelerationButton.MakeTextBigger(120);
+        }
+    }
+
+    class FastCar : Car
+    {
+        public override void Accelerate()
+        {
+            currentSpeed = 200;
         }
     }
 
