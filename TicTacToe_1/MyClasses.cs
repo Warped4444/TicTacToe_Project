@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace TicTacToe_1
 {
@@ -18,7 +19,7 @@ namespace TicTacToe_1
         }
         public void IncreaseTextSize()
         {
-            int size = accelerationButton.FontSize; 
+            double size = accelerationButton.FontSize; 
             accelerationButton.FontSize = 1000;
 
             string result = accelerationButton.MakeTextBigger(250);
@@ -36,16 +37,22 @@ namespace TicTacToe_1
         }
     }
 
-    class Button
+    class Button : System.Windows.Controls.Button
     {
-        private int fontSize = 60;
+        public Button()
+        {
+            FontSize = 120;
+            FontFamily = new System.Windows.Media.FontFamily("Calibri");
+            Background = new SolidColorBrush(Colors.White);
+            BorderBrush = new SolidColorBrush(Colors.Black);
+        }
 
         public string MakeTextBigger(int size)
         {
 
             if (size <= 200)
             {
-                fontSize = size;
+                FontSize = size;
                 return "Success";
             }
             else
@@ -53,14 +60,7 @@ namespace TicTacToe_1
             
         }
 
-        public int FontSize
-        {
-            get { return fontSize; }
-            set
-            {
-                fontSize = value;
-            }
-        }
+       
 
     }
 }
