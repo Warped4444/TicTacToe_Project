@@ -20,10 +20,6 @@ namespace TicTacToe_1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
 
         string currentLetter = "X";
 
