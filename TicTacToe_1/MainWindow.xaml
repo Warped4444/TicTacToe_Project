@@ -5,24 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TicTacToe_1"
         mc:Ignorable="d"
-        Title="TicTacToe App" Height="450" Width="450">
+        Title="TicTacToe App" Height="500" Width="500">
 
 
 
-    <UniformGrid Rows="3" Columns="3">
 
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
 
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
 
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
-        <local:Button Click="Button_Click"/>
 
-    </UniformGrid>
+    <StackPanel>
+        <Label x:Name="StatusLable"
+               Content="Player X's turn"
+               FontSize="22"
+               FontFamily="Calibri"
+               HorizontalAlignment="Center" 
+               Margin="10"/>
+        <UniformGrid x:Name="GameGrid" Rows="3 " Columns="3" Height="400">
+
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+            <local:Button Click="Button_Click"/>
+
+        </UniformGrid>
+
+    </StackPanel>
     
 </Window>
