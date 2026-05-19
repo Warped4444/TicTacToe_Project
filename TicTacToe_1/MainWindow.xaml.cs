@@ -36,16 +36,16 @@ namespace TicTacToe_1
             {
                 MessageBox.Show("This cell is already occupied. Please choose another one.");
                 return;
+            }
+            button.Content = currentLetter;
+            
+            button.IsEnabled = false;
 
-                button.Content = currentLetter;
-
-                button.IsEnabled = false;
-
-                if (CheckForWin())
+            if (CheckForWin())
                 {
-                    StatusLable.Content = "Player {currentLetter} wins!";
+                    StatusLable.Content =$"Player {currentLetter} wins!";
 
-                    MessageBox.Show("Player {currentLetter} wins!", "Game Over");
+                MessageBox.Show($"Player {currentLetter} wins!", "Game Over");
 
                     ResetGame();
 
@@ -62,17 +62,15 @@ namespace TicTacToe_1
 
                 currentLetter = currentLetter == "X" ? "O" : "X";
 
-                StatusLable.Content = "Player {currentLetter}'s turn";
+                StatusLable.Content = $"player {currentLetter}'s turn";
 
-            }
 
-           
-            
+
         }
          private bool CheckForWin()
         {
             var cells = new string[9];
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 9; i++)
             {
                 var button = GameGrid.Children[i] as TicTacToe_1.Button;
 
@@ -101,6 +99,7 @@ namespace TicTacToe_1
                 {
                     return true;
                 }
+                
             }
             return false;
         }
@@ -124,7 +123,7 @@ namespace TicTacToe_1
                 button.IsEnabled = true;
             }
             currentLetter = "X";
-            StatusLable.Content = "Player {currentLetter}'s turn";
+            StatusLable.Content = $"Player {currentLetter}'s turn";
         }
     }
 }
